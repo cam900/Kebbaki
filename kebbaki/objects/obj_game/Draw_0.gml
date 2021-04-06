@@ -1,6 +1,7 @@
 /// @description Draw UI
 var tmpcol = draw_get_color();
 var tempalg = draw_get_halign();
+var l = 0;
 // background
 if (gameover) // game is over?
 {
@@ -8,7 +9,18 @@ if (gameover) // game is over?
 }
 else
 {
-	draw_sprite(sprite_index,image_index,88,96);
+	// 자연스럽게 루프시키는 코드
+	var ind = floor(temp_index);
+	var len = sprite_get_number(sprite_index)-1;
+	l = (ind >= len) ? (len - (ind mod len)) : ind;
+	if ((sprite_index == spr_status2) || (sprite_index == spr_status3))
+	{
+		draw_sprite(sprite_index,l,88,96);
+	}
+	else
+	{
+		draw_sprite(sprite_index,ind,88,96);
+	}
 	draw_text_outline(bgs[bgp,2],bgs[bgp,3],scr_texlist(bgs[bgp,1]),c_black);
 }
 // status

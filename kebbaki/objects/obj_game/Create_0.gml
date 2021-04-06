@@ -8,4 +8,4 @@ strx = 0;
 bgs = [[spr_status1,1,416,209],[spr_status2,2,101,167],[spr_status3,3,385,192]];
 bgp = 0;
 gameover = false;
-image_speed = ((delta_time*60)/1000000);
+temp_index = ((delta_time*30)/1000000);

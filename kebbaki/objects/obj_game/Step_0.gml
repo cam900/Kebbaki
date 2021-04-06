@@ -62,5 +62,20 @@ else
 	strx = max(0,strx);
 	bgp = floor(strx / 220);
 	sprite_index = bgs[bgp][0];
-	image_speed = ((delta_time*60)/1000000);
+	temp_index += ((delta_time*30)/1000000);
+	// 자연스럽게 루프시키는 코드
+	if ((sprite_index == spr_status2) || (sprite_index == spr_status3))
+	{
+		while (temp_index >= ((sprite_get_number(sprite_index)-1) * 2))
+		{
+			temp_index -= ((sprite_get_number(sprite_index)-1) * 2);
+		}
+	}
+	else
+	{
+		while (temp_index >= (sprite_get_number(sprite_index)))
+		{
+			temp_index -= (sprite_get_number(sprite_index));
+		}
+	}
 }
