@@ -1,6 +1,8 @@
 케빡이
 =============
 
+[플레이](https://bzo5l2kzm8lpxmyehkhwea-on.drv.tw/kebbaki.nolara.ko/latest/)
+
 원작:
 * 개그콘서트 마빡이
 * 주전자닷컴 '제닉'
