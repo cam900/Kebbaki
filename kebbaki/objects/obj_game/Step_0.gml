@@ -1,7 +1,7 @@
 /// @description Step each frame
 // 진행상황에 따른 난이도 증가; delta_time 사용: 렉으로 인한 난이도 하락을 막기 위함
 strx += (1 + (floor(global.curr_score / 100) / 11)) * ((delta_time * 60) / 1000000);
-if (strx >= 660)
+if (strx >= 660) // game over
 {
 	event_user(0);
 	strx = min(3000,strx); // -3000
@@ -32,6 +32,10 @@ else
 	var keyfield = (keyboard_check_released(vk_right) << 0) | (keyboard_check_released(vk_left) << 1) | (keyboard_check_released(vk_up) << 2) | (keyboard_check_released(vk_down) << 3);
 	keyfield |= (keyboard_check_pressed(vk_right) << 4) | (keyboard_check_pressed(vk_left) << 5) | (keyboard_check_pressed(vk_up) << 6) | (keyboard_check_pressed(vk_down) << 7);
 	keyfield |= (keyboard_check(vk_right) << 8) | (keyboard_check(vk_left) << 9) | (keyboard_check(vk_up) << 10) | (keyboard_check(vk_down) << 11);
+	if (global.virtual_pad)
+	{
+		keyfield |= (global.vpadval[0] << 0) | (global.vpadval[1] << 1) | (global.vpadval[2] << 2) | (global.vpadval[3] << 3);
+	}
 	switch (string_char_at(curr_str,0))
 	{
 	case "→": // right

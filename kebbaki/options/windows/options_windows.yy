@@ -1,7 +1,7 @@
 {
   "option_windows_display_name": "kebbaki",
   "option_windows_executable_name": "${project_name}.exe",
-  "option_windows_version": "1.0.1.0",
+  "option_windows_version": "1.0.2.0",
   "option_windows_company_info": "kebbaki",
   "option_windows_product_info": "kebbaki",
   "option_windows_copyright_info": "MATRIX",

@@ -1,7 +1,7 @@
 {
   "option_mac_display_name": "kebbaki",
   "option_mac_app_id": "kebbaki.nolara.ko",
-  "option_mac_version": "1.0.1",
+  "option_mac_version": "1.0.2",
   "option_mac_output_dir": "kebbaki",
   "option_mac_team_id": "kebbaki",
   "option_mac_signing_identity": "Developer ID Application:",

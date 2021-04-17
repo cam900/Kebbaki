@@ -17,6 +17,9 @@ function scr_texlist(_ind)
 	case 3:
 		str = "이제 코만좀 눌러대라\n나 죽는다.\n그만 케인코버좀 하지";
 		break;
+	case 4:
+		str = "화면이 제대로 보이지 않는 경우, \n기기 화면 방향을 가로로 설정해주십시오.";
+		break;
 	}
 	return str;
 }

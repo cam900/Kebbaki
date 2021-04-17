@@ -13,4 +13,6 @@ draw_sprite(spr_status3,0,0,0);
 global.bgmstatus = noone;
 global.soundloaded = audio_group_is_loaded(audiogroup_default) && audio_sound_is_playable(snd_intro) && audio_sound_is_playable(snd_loop) && audio_sound_is_playable(snd_nani) && audio_sound_is_playable(snd_outro);
 global.curr_score = 0;
+global.virtual_pad = 0;
+global.vpadval = [0,0,0,0];
 event_user(0);
